@@ -4,7 +4,7 @@ from pathlib import Path
 from random import choice
 
 from bot.bot import Bot
-from bot.utils.weather import format_weather, weather_embed
+from bot.utils.weather import weather_embed
 
 with Path("./data/cities.txt").open() as f:
     cities = [city.strip() for city in f.readlines()]
