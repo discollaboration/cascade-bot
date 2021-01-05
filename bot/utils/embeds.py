@@ -34,4 +34,4 @@ def RoleInfo(role: Role):
     return e
 
 def GuildInfo():
-    pass
+    pass # TODO: Add guild info
