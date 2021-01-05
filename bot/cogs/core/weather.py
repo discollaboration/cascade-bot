@@ -1,19 +1,13 @@
 from py_owm import Weather
-from discord import Member
 from discord.ext import commands
 from pathlib import Path
 from random import choice
 
 from bot.bot import Bot
+from bot.utils.weather import format_weather
 
 with Path("./data/cities.txt").open() as f:
     cities = [city.strip() for city in f.readlines()]
-
-def format_weather(w: Weather):
-    data = f"In {w.name}, {w.sys['country']} it's {w.get_human_weather()},\n"
-    data += f"the temperature is {round(w.temp - 273.15, 3)}C, the humidity is {w.humidity},\n"
-    data += f"and the wind speed is {round(w.wind['speed'], 3)} mph."
-    return data
 
 
 class Weather(commands.Cog):
