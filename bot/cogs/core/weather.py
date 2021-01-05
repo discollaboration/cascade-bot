@@ -4,7 +4,7 @@ from pathlib import Path
 from random import choice
 
 from bot.bot import Bot
-from bot.utils.weather import format_weather
+from bot.utils.weather import format_weather, weather_embed
 
 with Path("./data/cities.txt").open() as f:
     cities = [city.strip() for city in f.readlines()]
@@ -18,14 +18,14 @@ class Weather(commands.Cog):
 
     @commands.command(name="weather")
     @commands.cooldown(1, 5, commands.BucketType.user)
-    async def weather(self, ctx: commands.Context, location: str = None):
+    async def weather(self, ctx: commands.Context, *, location: str = None):
         try:
             location = choice(cities) if not location else location
             w = await self.bot.weather.get_by_name(location)
         except:
             return await ctx.send("That's not a valid location!")
 
-        await ctx.send(format_weather(w))
+        await ctx.send(embed=weather_embed(w))
 
 
 def setup(bot: Bot):
