@@ -7,6 +7,8 @@ from discord.ext import commands
 from config.config import token, name, log_level, log_type, owm_token
 from .utils.logger import Logger
 
+VER = "1.0.1"
+
 
 class Bot(commands.Bot):
     """A subclassed version of commands.Bot"""
