@@ -3,3 +3,5 @@ termcolor
 discord.py==1.5.0
 jishaku
 git+https://github.com/vcokltfre/py-owm
+aiogtts
+git+https://github.com/vcokltfre/vcoutils
