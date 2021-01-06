@@ -1,7 +1,5 @@
 from aiohttp import ClientSession
 
-from config.config import rapidapi_token
-
 
 class AIOTTS:
     def __init__(self):
