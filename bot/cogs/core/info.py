@@ -3,7 +3,6 @@ import time
 import datetime as dt
 from humanize import naturaltime
 from discord.ext import commands
-from discord.utils import get
 
 from bot.bot import Bot
 from bot.utils.checks import is_dev
