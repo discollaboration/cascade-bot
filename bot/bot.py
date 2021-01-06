@@ -47,7 +47,7 @@ class Bot(commands.Bot):
 
 def run(cogs: list, debug=False, prefix=None, help_command=None):
     if prefix is None:
-        prefix = ["!"]
+        prefix = ["c!"]
     bot = Bot(
         debug=debug,
         command_prefix=prefix,
