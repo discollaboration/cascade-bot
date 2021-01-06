@@ -5,5 +5,5 @@ run([
     "bot.cogs.utility.general",
     "bot.cogs.core.weather",
     "bot.cogs.core.info",
-    "bot.cogs.core.mod"
+    #"bot.cogs.core.mod"
 ], debug=False)
